@@ -1,119 +1,195 @@
-# AK BANK — "Banking Made Simple."
+<div align="center">
 
-> **DEMO DISCLAIMER**:
-> **AK Bank is a fictional digital banking application created exclusively for demonstration and portfolio purposes.**
-> No real banking, payment gateways, real financial accounts, or monetary services are provided. All balances, account numbers, IBANs, and transactions are strictly simulated demo data.
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0A2540,100:00D09C&height=120&section=header" width="100%" alt=""/>
+
+<img src="assets/hero.svg" alt="AK Bank - Banking Made Simple" width="100%"/>
+
+<a href="https://github.com/mawiya-47/Bank-app">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1200&color=00D09C&center=true&vCenter=true&width=700&lines=Native+Android+banking+app+%F0%9F%8F%A6;Customer+%7C+Admin+%7C+Support+roles+%F0%9F%9B%A1%EF%B8%8F;Virtual+cards%2C+bill+pay+%26+AI+assistant+%F0%9F%A4%96;100%25+demo+data.+Zero+real+money.+%F0%9F%92%B8" alt="Typing animation"/>
+</a>
+
+<br/>
+
+![Kotlin](https://img.shields.io/badge/Kotlin-2.2-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)
+![Compose](https://img.shields.io/badge/Jetpack_Compose-Material_3-4285F4?style=for-the-badge&logo=jetpackcompose&logoColor=white)
+![Room](https://img.shields.io/badge/Room-SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+
+![Platform](https://img.shields.io/badge/Platform-Android-3DDC84?style=flat-square&logo=android&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Demo-E5A93C?style=flat-square)
+![Money](https://img.shields.io/badge/Real_Money-0_PKR-00D09C?style=flat-square)
+
+</div>
+
+> [!WARNING]
+> **Demo disclaimer:** AK Bank is a **fictional** banking app made only for demonstration and portfolio purposes. No real banking, payment gateways, or financial accounts exist. All balances, account numbers, IBANs and transactions are simulated.
 
 ---
 
-## 🏛️ Project Overview
+## 🏛️ What is AK Bank?
 
-**AK Bank** is a complete, production-grade digital banking application designed with modern aesthetics comparable to major Pakistani mobile banking applications (e.g. Meezan, HBL, Bank Alfalah), while featuring completely original branding, minimalist luxury design (`#0A2540` Navy, `#00D09C` Emerald Mint), and local database persistence.
+A complete digital banking experience with a minimalist luxury look, built natively for Android. Think the polish of big mobile banking apps, but with original branding: **Navy `#0A2540`**, **Emerald Mint `#00D09C`** and **Gold `#E5A93C`**, with automatic dark and light mode.
 
-### Key Capabilities
-- **Role-Based Access Control (RBAC)**:
-  - 👤 **Customer**: Accounts, transfers, bill payments, mobile top-up, virtual cards, AI financial assistant, statements.
-  - 🛡️ **Administrator**: System liquidity overview, customer management, account suspension/activation, transaction reviews, immutable audit trail.
-  - 🎧 **Support Desk Agent**: Customer inquiry lookup, support ticket thread messaging, resolution status.
-- **Durable Local Persistence**:
-  - Full relational database powered by **Room / SQLite** with rich pre-seeded mock transactions, accounts, cards, billers, and audit logs.
-- **Interactive Financial Tools**:
-  - Interbank transfers with live balance validation and digital PDF-style receipt generation.
-  - Utility bill lookup and payment (K-Electric, LESCO, SSGC, PTCL).
-  - Mobile airtime recharge (Jazz, Telenor, Zong, Ufone).
-  - Virtual Debit Card with instant lock/freeze, spending limit sliders, and CVV reveal.
-  - **AK Assistant**: Natural language financial insights engine analyzing your actual transaction history.
+<table>
+<tr>
+<td width="33%" valign="top">
+
+### 👤 Customer
+Accounts, transfers, bill payments, mobile top-up, virtual cards, AI financial assistant and statements.
+
+</td>
+<td width="33%" valign="top">
+
+### 🛡️ Administrator
+System liquidity overview, customer management, account suspend/activate, transaction reviews and an immutable audit trail.
+
+</td>
+<td width="33%" valign="top">
+
+### 🎧 Support Agent
+Customer inquiry lookup, support ticket threads and resolution status.
+
+</td>
+</tr>
+</table>
+
+---
+
+## ⚡ Features
+
+| | Feature | Details |
+|---|---|---|
+| 💸 | **Interbank Transfers** | Live balance validation and a digital receipt after every transfer |
+| 💡 | **Bill Payments** | K-Electric, LESCO, SSGC, PTCL with biller lookup |
+| 📶 | **Mobile Top-up** | Jazz, Telenor, Zong, Ufone |
+| 💳 | **Virtual Debit Card** | Instant lock/freeze, spending-limit slider, CVV reveal |
+| 🤖 | **AK Assistant** | Natural-language insights based on your real transaction history |
+| 🗄️ | **Durable Storage** | Room/SQLite, pre-seeded with accounts, cards, billers and audit logs |
+| 🔐 | **RBAC** | Three roles with separate screens and permissions |
 
 ---
 
 ## 🔑 Demo Credentials
 
-| Role | Email | Password | Transaction PIN |
+Use the **1-tap demo login buttons** on the login screen, or enter these manually:
+
+| Role | Email | Password | PIN |
 |---|---|---|---|
-| **Customer** | `demo@akbank.demo` | `Demo@12345` | `1234` |
-| **Administrator** | `admin@akbank.demo` | `Admin@12345` | `9999` |
-| **Support Agent** | `support@akbank.demo` | `Support@12345` | `5555` |
-
-*(Quick 1-tap demo login buttons are provided on the login screen for instant evaluation).*
+| 👤 Customer | `demo@akbank.demo` | `Demo@12345` | `1234` |
+| 🛡️ Admin | `admin@akbank.demo` | `Admin@12345` | `9999` |
+| 🎧 Support | `support@akbank.demo` | `Support@12345` | `5555` |
 
 ---
 
-## 📱 Mobile Architecture & Tech Stack
+## 🧱 Architecture
 
-- **Platform**: Android Native
-- **Language**: Kotlin 2.2
-- **UI Framework**: Jetpack Compose (Material Design 3)
-- **Local Persistence**: Android Room Database (SQLite) + Kotlin Symbol Processing (KSP)
-- **State Management**: Android Architecture Components (ViewModel, StateFlow, Coroutines)
-- **Navigation**: Jetpack Navigation Compose
-- **Design System**: AK Bank Custom Palette (Navy `#0A2540`, Mint `#00D09C`, Gold `#E5A93C`) with automatic Dark & Light mode.
+```mermaid
+flowchart LR
+    subgraph Android["📱 Android App"]
+        UI["Jetpack Compose UI<br/>Material 3"] --> VM["ViewModel<br/>StateFlow + Coroutines"]
+        VM --> Repo["BankRepository"]
+        Repo --> DAO["Room DAO"]
+        DAO --> DB[("SQLite")]
+    end
+    subgraph Docker["🐳 Optional Backend"]
+        API["FastAPI :8000"] --> PG[("PostgreSQL")]
+        API --> RD[("Redis")]
+    end
+    Repo -. optional .-> API
+```
 
 ---
 
-## 🐳 Optional Full-Stack Docker Backend
+## 🛠️ Tech Stack
 
-A companion FastAPI + PostgreSQL + Redis backend is provided in the repository:
+<div align="center">
+
+<img src="https://skillicons.dev/icons?i=kotlin,androidstudio,gradle,sqlite,python,fastapi,postgres,redis,docker&theme=dark" alt="Tech stack"/>
+
+</div>
+
+- **Language:** Kotlin 2.2
+- **UI:** Jetpack Compose (Material Design 3)
+- **Persistence:** Room (SQLite) + KSP
+- **State:** ViewModel, StateFlow, Coroutines
+- **Navigation:** Navigation Compose
+- **Backend (optional):** FastAPI + PostgreSQL + Redis via Docker Compose
+
+---
+
+## 🚀 Getting Started
+
+### 📱 Run the Android app
 
 ```bash
-# Start backend and database services
+git clone https://github.com/mawiya-47/Bank-app.git
+cd Bank-app
+```
+
+1. Open the project in **Android Studio**.
+2. Let Gradle sync finish.
+3. Run on an emulator or a physical device.
+4. Tap a demo login button and explore.
+
+### 🐳 Run the optional backend
+
+```bash
 docker compose up --build
 ```
 
-- **Backend API**: `http://localhost:8000`
-- **Interactive Swagger Docs**: `http://localhost:8000/docs`
+| Service | URL |
+|---|---|
+| API | http://localhost:8000 |
+| Swagger Docs | http://localhost:8000/docs |
+
+Copy `.env.example` to `.env` first if you need to change any settings.
 
 ---
 
 ## 📁 Project Structure
 
+<details>
+<summary><b>Click to expand</b></summary>
+
 ```
 ├── app/
-│   ├── src/main/java/com/example/
-│   │   ├── MainActivity.kt
-│   │   ├── data/
-│   │   │   ├── local/
-│   │   │   │   ├── AppDatabase.kt
-│   │   │   │   ├── BankDao.kt
-│   │   │   │   └── DatabaseInitializer.kt
-│   │   │   ├── model/
-│   │   │   │   └── Entities.kt
-│   │   │   └── repository/
-│   │   │       └── BankRepository.kt
-│   │   ├── ui/
-│   │   │   ├── components/
-│   │   │   │   └── CommonComponents.kt
-│   │   │   ├── screens/
-│   │   │   │   ├── admin/AdminScreen.kt
-│   │   │   │   ├── analytics/AnalyticsScreen.kt
-│   │   │   │   ├── assistant/AssistantScreen.kt
-│   │   │   │   ├── auth/AuthScreens.kt
-│   │   │   │   ├── cards/CardsScreen.kt
-│   │   │   │   ├── home/HomeScreen.kt
-│   │   │   │   ├── landing/LandingScreen.kt
-│   │   │   │   ├── profile/ProfileScreen.kt
-│   │   │   │   ├── search/SearchAndNotifications.kt
-│   │   │   │   └── transfers/TransfersScreen.kt
-│   │   │   └── theme/
-│   │   │       ├── Color.kt
-│   │   │       ├── Theme.kt
-│   │   │       └── Type.kt
-│   │   └── viewmodel/
-│   │       └── BankViewModel.kt
-│   └── build.gradle.kts
-├── backend/
-│   ├── Dockerfile
-│   ├── main.py
-│   └── requirements.txt
-├── database/
-│   └── init.sql
+│   └── src/main/java/com/example/
+│       ├── MainActivity.kt
+│       ├── data/
+│       │   ├── local/        AppDatabase, BankDao, DatabaseInitializer
+│       │   ├── model/        Entities
+│       │   └── repository/   BankRepository
+│       ├── ui/
+│       │   ├── components/   CommonComponents
+│       │   ├── screens/      admin, analytics, assistant, auth, cards,
+│       │   │                 home, landing, profile, search, transfers
+│       │   └── theme/        Color, Theme, Type
+│       └── viewmodel/        BankViewModel
+├── backend/                  Dockerfile, main.py, requirements.txt
+├── database/                 init.sql
 ├── docker-compose.yml
-├── metadata.json
-└── README.md
+└── metadata.json
 ```
+
+</details>
 
 ---
 
-## 🛡️ Play Policy & Privacy Compliance
-- Zero dangerous runtime permissions required.
-- No real banking or financial data collected.
-- Fictional demo CNIC and phone formats strictly for demonstration.
+## 🛡️ Privacy & Policy
+
+- No dangerous runtime permissions required
+- No real banking or financial data collected
+- Demo CNIC and phone formats are fictional
+
+---
+
+<div align="center">
+
+### Made with 💚 by [@mawiya-47](https://github.com/mawiya-47)
+
+If you like this project, drop a ⭐
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00D09C,100:0A2540&height=120&section=footer" width="100%" alt=""/>
+
+</div>
