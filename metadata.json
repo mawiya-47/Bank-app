@@ -1,0 +1,6 @@
+{
+  "name": "AK Bank",
+  "description": "Fictional digital banking application with complete accounts, transfers, bills, cards, analytics, AI assistant, and admin portal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: akbank-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: akbank_user
+      POSTGRES_PASSWORD: akbank_secure_password
+      POSTGRES_DB: akbank_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  redis:
+    image: redis:7-alpine
+    container_name: akbank-redis
+    restart: always
+    ports:
+      - "6379:6379"
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: akbank-backend
+    restart: always
+    environment:
+      DATABASE_URL: postgresql://akbank_user:akbank_secure_password@postgres:5432/akbank_db
+      REDIS_URL: redis://redis:6379/0
+      JWT_SECRET: akbank_super_secret_jwt_key_2024
+      JWT_ALGORITHM: HS256
+      ACCESS_TOKEN_EXPIRE_MINUTES: 60
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+      - redis
+
+volumes:
+  postgres_data:
